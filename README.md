@@ -1,62 +1,88 @@
 # Week 1 — Cyber Threat Landscape Analysis & Strategic Planning
 
-![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-blue)
-![Internship](https://img.shields.io/badge/Internship-Cyber%20Security%20Analyst-orange)
-![Week](https://img.shields.io/badge/Week-1-green)
+![Focus](https://img.shields.io/badge/Focus-Cybersecurity-blue)
+![Internship](https://img.shields.io/badge/Track-Cyber%20Security%20Analyst-orange)
+![Week](https://img.shields.io/badge/Week-01-green)
 ![Year](https://img.shields.io/badge/Year-2026-lightgrey)
+![Scope](https://img.shields.io/badge/Scope-Educational%20%7C%20Defensive-0f766e)
 
-## 📌 Overview
+> A structured review of common cyber threats, qualitative organizational risk, and practical security-planning priorities.
 
-This repository contains my **Week 1 Cyber Security Analyst internship task** focused on **Cyber Threat Landscape Analysis and Strategic Cybersecurity Planning**.
+## Executive Summary
 
-The objective of this task was to research the current cyber threat environment, identify major threats and vulnerabilities, assess associated risks, and develop a practical strategic plan for prevention, detection, response, mitigation, and recovery.
+This Week 1 internship assignment examines the cyber threat landscape and translates the findings into a practical cybersecurity improvement plan. It covers five threat categories, applies a qualitative 5×5 likelihood-and-impact model, and proposes defensive controls, a phased roadmap, and security performance indicators.
 
-## 🎯 Objectives
+The assessment is educational. Its risk ratings are analyst-assigned examples for this exercise, not measured probabilities or a risk assessment of a named organization.
 
-- Analyze the current cyber threat landscape.
-- Research major and emerging cyber threats.
-- Assess threat likelihood and business impact.
-- Identify common organizational vulnerabilities.
-- Recommend preventive and mitigation controls.
-- Develop a phased cybersecurity strategy.
-- Define measurable security KPIs.
-- Document an incident-response framework.
-- Present findings using professional charts and structured analysis.
+## Contents
 
-## 🛡️ Major Threats Analyzed
+- [Objectives](#objectives)
+- [Scope and approach](#scope-and-approach)
+- [Threat assessment](#threat-assessment)
+- [Risk scoring methodology](#risk-scoring-methodology)
+- [Strategic security roadmap](#strategic-security-roadmap)
+- [Security KPIs](#security-kpis)
+- [Repository contents](#repository-contents)
+- [References](#references)
+- [Learning outcomes](#learning-outcomes)
+- [Ethical and legal scope](#ethical-and-legal-scope)
 
-| Threat | Likelihood | Impact | Risk Score | Priority |
+## Objectives
+
+- Review major and emerging cyber threat categories.
+- Consider likelihood, business impact, and organizational exposure.
+- Identify common weaknesses associated with each threat.
+- Recommend preventive, detective, response, and recovery controls.
+- Prioritize improvements through a phased roadmap.
+- Identify measurable indicators for ongoing security oversight.
+
+## Scope and Approach
+
+The analysis is organized around five threat categories:
+
+1. Ransomware and double extortion
+2. Phishing and social engineering
+3. Infostealers and credential theft
+4. Distributed denial-of-service (DDoS)
+5. Supply-chain and third-party compromise
+
+**Workflow:** threat research → threat characterization → qualitative risk rating → defensive controls → improvement roadmap → KPIs.
+
+The supporting report and source list are included in this repository. The assessment should be revisited when the environment, threat intelligence, or business priorities change.
+
+## Threat Assessment
+
+| Threat category | Likelihood | Impact | Risk score | Priority |
 |---|---:|---:|---:|---|
-| Ransomware / Double Extortion | 5/5 | 5/5 | 20 | Critical |
-| Phishing / Social Engineering | 5/5 | 4/5 | 20 | Critical |
-| Infostealers / Credential Theft | 4/5 | 4/5 | 16 | High |
-| Supply Chain / Third-Party Compromise | 3/5 | 5/5 | 15 | High |
-| DDoS / Service Disruption | 4/5 | 3/5 | 12 | High |
+| Ransomware / Double Extortion | 5/5 | 5/5 | **25** | Critical |
+| Phishing / Social Engineering | 5/5 | 4/5 | **20** | Critical |
+| Infostealers / Credential Theft | 4/5 | 4/5 | **16** | Critical |
+| Supply-Chain / Third-Party Compromise | 3/5 | 5/5 | **15** | High |
+| DDoS / Service Disruption | 4/5 | 3/5 | **12** | High |
 
-> Risk score = Likelihood × Impact. The scores in this table are an educational analyst assessment and should be recalibrated for a specific organization.
+**Calculation correction:** the ransomware score is 5 × 5 = **25**, not 20. The remaining scores follow the same likelihood × impact formula.
 
-## 🔍 Key Areas Covered
+### Risk visuals
 
-### 1. Ransomware
-Analysis of ransomware, double-extortion, common entry paths, organizational weaknesses, business impact, and recommended controls such as MFA, segmentation, immutable backups, EDR, patch management, and recovery testing.
+![Threat risk matrix](charts/threat-risk-matrix.png)
 
-### 2. Phishing & Social Engineering
-Analysis of credential theft, malicious links, impersonation, business email compromise, and human-factor risks, with recommendations including phishing-resistant MFA, email security, DMARC/SPF/DKIM, awareness training, and verification procedures.
+![Threat comparison](charts/threat-comparison.png)
 
-### 3. Infostealers & Credential Theft
-Analysis of malware that steals browser credentials, cookies, session tokens and other secrets, with defensive measures including EDR, browser hardening, password managers, unique credentials, session revocation, and secure software practices.
+### Threat themes and defensive controls
 
-### 4. Distributed Denial-of-Service (DDoS)
-Analysis of attacks against network and application availability, with controls including upstream DDoS protection, rate limiting, traffic monitoring, redundancy, and tested response procedures.
+| Threat | Main concern examined | Defensive controls proposed |
+|---|---|---|
+| Ransomware | Service disruption, extortion, and recovery pressure | MFA, network segmentation, endpoint protection, patching, isolated/immutable backups, and restoration exercises |
+| Phishing / Social Engineering | Credential theft, impersonation, and business email compromise | Phishing-resistant MFA, email authentication and filtering, awareness training, and out-of-band verification |
+| Infostealers / Credential Theft | Theft of browser credentials, cookies, and session tokens | Endpoint protection, browser hardening, password managers, unique credentials, and session revocation |
+| DDoS | Loss of network or application availability | Upstream DDoS protection, rate limiting, traffic monitoring, redundancy, and tested response procedures |
+| Supply-chain compromise | Risk introduced through vendors, SaaS, dependencies, and CI/CD | Vendor risk review, dependency verification, SBOM practices, least-privilege vendor access, and secure CI/CD controls |
 
-### 5. Supply-Chain & Third-Party Compromise
-Analysis of risks arising from vendors, SaaS providers, open-source dependencies and CI/CD pipelines, with controls including SBOMs, dependency verification, least-privilege vendor access, secure CI/CD, and vendor risk management.
+## Risk Scoring Methodology
 
-## 📊 Risk Assessment Methodology
+**Risk score = Likelihood × Impact**
 
-A qualitative **5×5 risk matrix** was used:
-
-**Risk Score = Likelihood × Impact**
+Each factor is rated from 1 (lowest) to 5 (highest).
 
 | Score | Classification |
 |---:|---|
@@ -65,88 +91,99 @@ A qualitative **5×5 risk matrix** was used:
 | 10–15 | High |
 | 16–25 | Critical |
 
-## 🗺️ Strategic Cybersecurity Roadmap
+These are the classification bands used in this educational exercise. Ratings are illustrative and should be recalibrated using organization-specific assets, control maturity, threat information, and business impact.
 
-### Phase 1 — Immediate Actions (0–30 Days)
+## Strategic Security Roadmap
+
+### Phase 1 — Immediate Actions (0–30 days)
+
 - Inventory internet-facing assets and privileged accounts.
 - Enforce MFA on critical accounts.
-- Patch critical exposed vulnerabilities.
+- Prioritize patching of critical exposed vulnerabilities.
 - Validate backup isolation and restoration.
-- Improve endpoint protection and logging.
+- Review endpoint protection and security logging.
 - Establish incident-response contacts and escalation paths.
 
-### Phase 2 — Stabilization (31–90 Days)
-- Implement network segmentation.
-- Establish formal vulnerability-management SLAs.
+### Phase 2 — Stabilization (31–90 days)
+
+- Improve network segmentation.
+- Define vulnerability-management remediation expectations.
 - Strengthen email security.
-- Establish vendor-risk assessments.
+- Establish third-party risk reviews.
 - Conduct security-awareness training.
 - Define baseline security metrics.
 
-### Phase 3 — Maturity (3–6 Months)
-- Improve SIEM and detection engineering.
-- Integrate threat intelligence.
-- Maintain an SBOM for critical applications.
-- Harden CI/CD and secrets management.
-- Conduct tabletop incident-response exercises.
-- Test disaster recovery.
+### Phase 3 — Maturity (3–6 months)
 
-### Phase 4 — Continuous Improvement (6–12 Months)
-- Continuously monitor security controls.
+- Improve SIEM monitoring and detection engineering.
+- Incorporate relevant threat intelligence.
+- Maintain an SBOM for critical applications.
+- Harden CI/CD pipelines and secrets management.
+- Conduct incident-response tabletop exercises.
+- Test disaster-recovery procedures.
+
+### Phase 4 — Continuous Improvement (6–12 months)
+
+- Monitor security-control effectiveness.
 - Conduct authorized security testing.
 - Review privileged and vendor access.
-- Update threat models for new technologies.
-- Use incidents and near misses to improve controls.
+- Update threat models as technology changes.
+- Use incidents and near misses to improve safeguards.
 
-## 📈 Security KPIs
+## Security KPIs
 
-The report proposes tracking:
+The report proposes tracking the following indicators. No performance values or targets are asserted in this README.
 
-- Critical vulnerability remediation time
-- MFA coverage
-- Backup restoration success
-- Mean Time to Detect (MTTD)
-- Mean Time to Respond (MTTR)
-- Security-awareness training completion
-- Critical vendor assessment coverage
-- DDoS response readiness
+| KPI | What it helps monitor |
+|---|---|
+| Critical vulnerability remediation time | Timeliness of addressing critical exposure |
+| MFA coverage | Adoption of stronger authentication |
+| Backup restoration success | Recoverability of protected data |
+| MTTD | Mean Time to Detect |
+| MTTR | Mean Time to Respond |
+| Security-awareness completion | Completion of awareness activities |
+| Critical vendor assessment coverage | Coverage of third-party risk reviews |
+| DDoS response readiness | Preparedness for availability incidents |
 
-## 📁 Repository Structure
+Targets should be set after a baseline is established and business requirements are understood.
+
+## Repository Contents
 
 ```text
 week-1-cyber-threat-landscape-analysis/
-│
 ├── README.md
-│
 ├── report/
 │   └── Week_1_Cyber_Threat_Landscape_Analysis_2026.docx
-│
 ├── charts/
 │   ├── threat-risk-matrix.png
 │   └── threat-comparison.png
-│
 └── references/
     └── sources.md
 ```
 
-## 📚 References
+- **Report:** detailed assignment write-up.
+- **Charts:** risk matrix and threat comparison visuals.
+- **References:** source links used to support the research.
 
-The analysis uses recent publicly available cybersecurity intelligence and industry research, including ENISA, Verizon, Microsoft, Cloudflare, IBM, and Palo Alto Networks Unit 42.
+## References
 
-See [`references/sources.md`](references/sources.md) for the source list.
+See [references/sources.md](references/sources.md) for the source list, including ENISA, Verizon, Microsoft, Cloudflare, IBM, and Palo Alto Networks Unit 42 materials selected for this assignment.
 
-## ⚠️ Ethical & Legal Scope
+## Learning Outcomes
 
-This project is intended for **educational and defensive cybersecurity analysis**.
+- Categorizing common cyber threats.
+- Applying a qualitative likelihood-and-impact model.
+- Explaining defensive security controls.
+- Organizing improvements into a phased roadmap.
+- Selecting security indicators for ongoing review.
 
-No unauthorized scanning, exploitation, credential theft, persistence, malware deployment, or access to systems without permission is performed or encouraged as part of this project.
+## Ethical and Legal Scope
 
-## 👨‍💻 Author
-
-**Injmam Ansari**
-
-Cybersecurity Intern | BCA Student
+This is an **educational and defensive cybersecurity analysis**. It does not document unauthorized scanning, exploitation, credential theft, persistence, malware deployment, or access to systems without permission. Any real-world assessment must have clear authorization and an agreed scope.
 
 ---
 
-⭐ This repository documents my Week 1 cybersecurity internship work and demonstrates skills in threat research, risk assessment, strategic planning, security controls, and incident-response planning.
+**Author:** Injmam Ansari  
+BCA Student | Cybersecurity Intern
+
+*Week 1 internship documentation — Cyber Threat Landscape Analysis & Strategic Planning.*
